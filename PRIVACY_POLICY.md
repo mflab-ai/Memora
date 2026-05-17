@@ -31,4 +31,4 @@ We may update our Privacy Policy from time to time. We will notify you of any ch
 
 ## 6. Contact Us
 
-If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us or open an issue on our public repository.
+If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact MFLab-AI (Sang Hun Kim) or open an issue on our public repository.
