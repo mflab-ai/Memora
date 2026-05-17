@@ -1,79 +1,86 @@
 # Memora (Re-Moment)
 
-🌐 **Select Language / 언어 선택:**
+Select language:
 [English](./README.md) | [한국어](./README_KO.md) | [日本語](./README_JA.md) | [简体中文](./README_ZH.md) | [Español](./README_ES.md) | [Français](./README_FR.md) | [Português](./README_PT.md) | [हिन्दी](./README_HI.md) | [বাংলা](./README_BN.md) | [العربية](./README_AR.md)
 
 ---
 
 [![Platform: iOS 18+](https://img.shields.io/badge/Platform-iOS%2018%2B-blue.svg?style=flat-square&logo=apple)](https://developer.apple.com/ios/)
-[![Platform: macOS 15+](https://img.shields.io/badge/Platform-macOS%2015%2B-lightgrey.svg?style=flat-square&logo=apple)](https://developer.apple.com/macos/)
+[![Platform: iPadOS 18+](https://img.shields.io/badge/Platform-iPadOS%2018%2B-blue.svg?style=flat-square&logo=apple)](https://developer.apple.com/ipados/)
 [![Framework: Swift 6](https://img.shields.io/badge/Framework-Swift%206-orange.svg?style=flat-square&logo=swift)](https://developer.apple.com/swift/)
 [![License: Proprietary](https://img.shields.io/badge/License-Proprietary-red.svg?style=flat-square)](./LICENSE.md)
 
-Memora (internally code-named **Re-Moment**) is a privacy-first, on-device AI-powered smart story collection and photo-slideshow companion. It enables users to automatically group, beautifully caption, and dynamically render cinematic slideshows of their personal memories—all while ensuring that sensitive photo assets and metadata remain strictly under their own control.
+Memora, internally code-named **Re-Moment**, is a local-first iPhone and iPad app that analyzes a user's Photos library and turns related moments into short memory-story videos. The app focuses on private photo indexing, reviewable recommendations, editable story drafts, and on-device rendering. Pro Vision AI is an optional paid acceleration path for higher-quality captions and faster remote-assisted indexing.
 
 ---
 
-## 📸 Core Features
+## Core Features
 
-### 🧠 Spatio-Temporal Smart Collections
-* **Clustering & Recommend Engine:** Automatically groups assets by sophisticated spatial (geographic location) and temporal (time intervals) thresholds into cohesive, contextual events (e.g., *"Weekend in Paris"*, *"Summer Picnic"*).
-* **Thematic Diversification:** Combines user preferences, original photo metadata, and visual features into intelligent, structured collection signals and summary cards.
+### Smart Story Recommendations
+* **Photo library indexing:** Memora reads the user's selected Photos library with PhotoKit and extracts date, location, favorite, media type, quality, face-count, scene, and caption signals.
+* **Recommendation cards:** The app builds story candidates such as same-person moments, similar backdrops, food collections, seasonal memories, city/trip views, time snapshots, meaningful moments, and video highlights.
+* **Search and maintenance:** Indexed photos can be searched locally, and the app includes maintenance actions for translation backfill, consistency repair, recommendation feedback reset, and indexing recovery.
 
-### 🛡️ On-Device Local-First Vision AI
-* **Zero-Knowledge Indexing:** Performs primary face grouping, feature indexing, and object recognition entirely on-device utilizing Apple's **CoreML**, **Vision**, and local LLM/VLM runners (**MLX Swift / MLX Swift LM / MLX VLM**).
-* **Private Metadata Storage:** Generates summaries, captions, and smart logs safely saved in the device's secure sandbox or synchronized securely via personal **Apple iCloud** accounts.
+### Reviewable Memory Stories
+* **Story review:** Users can inspect a suggested story before rendering, replace or remove selected photos, add more candidates, reorder assets, and register representative people from face-rich photos.
+* **Feedback controls:** Users can archive generated stories, hide a specific recommendation, hide similar recommendation types, and undo recent feedback.
+* **People support:** Registered person profiles can be used to build person-focused stories and improve future recommendations.
 
-### ⚡ Pro Vision AI (Cloud-Assisted VLM)
-* **High-Fidelity Captions:** Opt-in premium feature providing rich, context-aware captions and deeply detailed tags via advanced Vision-Language Models (VLM).
-* **In-Memory Zero-Retention Policy:** Transmitted images are processed purely in-memory on our dedicated FastAPI proxy and are **instantly deleted** immediately after returning the caption. No image logging, storage, or external training ever occurs.
+### Local-First Vision and Storage
+* **On-device default:** Standard indexing and fallback captions use local PhotoKit, Vision, and metadata-based analysis. Photos are not sent to the server unless the user enables and uses Pro Vision AI.
+* **Local database:** Memora stores indexes, stories, render jobs, preferences, checkpoints, and person profiles in the app sandbox with SwiftData. Users may choose iCloud Drive-backed database storage where available.
+* **Diagnostics:** MetricKit diagnostics are used for crash, hang, launch, CPU, and disk-write troubleshooting. These diagnostics do not include the user's photo files.
 
-### 🎬 Cinematic Photo Slideshow Rendering
-* **Dynamic Transition Engine:** Automatically stitches photo story assets into professional-grade videos using specialized transitions (including *Cross Dissolve, Push, Wipe, Zoom, and Ken Burns effects*).
-* **PhotoKit Integration:** Built natively on Apple's **PhotoKit** and **AVFoundation** to support fluid, high-resolution rendering up to 60fps directly on iOS and macOS hardware.
+### Pro Vision AI
+* **Optional paid feature:** Pro Vision AI uses a server-side proxy for enhanced VLM captioning and remote indexing quota enforcement. When quota is unavailable or the server cannot be reached, the app remains usable with standard local Vision AI.
+* **Server-side control:** The backend verifies StoreKit entitlement state, issues short-lived access tokens, enforces quota, protects provider API keys, applies idempotency, and tracks abuse signals.
+* **Image handling:** Image payloads are forwarded only for the requested captioning operation. The service is designed not to store original image bytes for product use or AI training. Operational records such as sanitized request metadata, provider response text, request status, quota counters, device hashes, and error information may be retained for entitlement, quota, debugging, security, and abuse-prevention purposes.
 
----
-
-## 🔒 Privacy & Data Security Commitment
-
-Memora is engineered under the strict principle of user data sovereignty. We guarantee absolute confidentiality and security regarding your personal photos:
-
-> [!IMPORTANT]
-> * **Zero Server-Side Storage:** Any photo transmitted to our servers for the optional "Pro Vision AI" feature is handled exclusively in temporary transient RAM. Your photos are **never** written to disk, saved in databases, cached, or stored on any server logs under any circumstances.
-> * **No AI Model Training:** We hold a strict zero-use policy for machine learning development. Your photos, generated descriptions, and private metadata are **never** used to train, fine-tune, or improve any machine learning, VLM, or AI models.
-> * **Instant RAM Destruction:** The moment the proxy server responds to your device with the generated caption, all associated image bytes in RAM are **instantly and permanently destroyed**.
-> * **On-Device Default:** All fundamental features—such as photo grouping, local indexing, face recognition, and video rendering—run 100% on-device. No network transmission is required unless you explicitly choose to enable Pro Vision AI.
+### Video Rendering and Saving
+* **Native renderer:** Memory stories are rendered with AVFoundation from cached photo assets at a 30fps target by default, with motion and transition effects such as dissolve, slide, wipe, and zoom-style movement.
+* **Photos export:** Before rendering, Memora prepares local copies of iCloud-only assets when needed. Rendered videos are saved back to Photos using add-only permission and Photos-compatible MOV fallback handling.
+* **Progress and cancellation:** Download, render, save, failure, cancellation, and recovery states are shown in the app.
 
 ---
 
-## 🛠️ Technology Stack
+## Important Notes
 
-### Client (iOS / macOS)
-* **Language/Frameworks:** Swift 6, SwiftUI, SwiftData, CoreML, Vision, AVFoundation, PhotoKit
-* **On-Device AI Ecosystem:** `mlx-swift`, `mlx-swift-lm`, `swift-huggingface`, `swift-transformers`
-* **Performance Network & Utilities:** `yyjson` (extreme-performance JSON parser), `EventSource` (SSE streaming API handler), `swift-jinja` (template renderer)
-
-### Server (Python Backend Proxy)
-* **API Gateway & Core:** FastAPI, Uvicorn, Starlette, Pydantic & Pydantic Settings
-* **Database & Migration:** PostgreSQL, SQLAlchemy (ORM), Alembic, Psycopg 3
-* **Cryptographic & Verification:** `cryptography` (Apple App Store API signature checking), `PyJWT` (JWS Token processing)
+* Memora requires Photos read access to index and recommend stories. Limited Photos access is supported, but full access provides the intended experience.
+* Saving rendered videos requires Photos add-only permission.
+* Pro Vision AI sends selected image data to the backend and configured VLM provider. Use it only for photos you are comfortable processing through the remote service.
+* AI-generated captions and recommendations can be inaccurate. Review story contents before rendering or sharing.
+* iCloud Drive database storage depends on the user's Apple iCloud configuration and device availability.
+* Product names, quotas, prices, and platform availability may change before or after App Store release.
 
 ---
 
-## ⚖️ Policies, Terms & Licensing
+## Technology Stack
 
-Please refer to the following documents for comprehensive information regarding usage policies, terms, and licenses:
+### Client
+* Swift 6, SwiftUI, SwiftData
+* PhotoKit, Vision, AVFoundation, MetricKit
+* MLX Swift LM / MLX VLM-related packages, Swift HuggingFace, Swift Transformers
 
-* 📄 **[Privacy Policy](./PRIVACY_POLICY.md)** – Comprehensive policy outlining our zero-data retention server policy, on-device local storage, and secure iCloud synchronization.
-* 📄 **[Terms of Service](./TERMS_OF_SERVICE.md)** – Terms governing mobile application usage, in-app purchases (IAP) via Apple App Store, and Pro Vision AI quota policies.
-* 📄 **[Legal Notice](./LEGAL_NOTICE.md)** – Developer information (MFLab-AI / Sang Hun Kim), intellectual property declarations, and service disclaimers.
-* 📄 **[Open Source Licenses](./OPEN_SOURCE_LICENSES.md)** – Detailed list of external third-party libraries and frameworks incorporated in both client and server applications.
+### Server
+* FastAPI, Uvicorn, Starlette
+* PostgreSQL, SQLAlchemy, Alembic, Psycopg 3
+* Pydantic, Pydantic Settings, HTTPX
+* PyJWT and cryptography for StoreKit and token verification paths
 
 ---
 
-## 🛡️ License
+## Policies and Licensing
+
+* [Privacy Policy](./PRIVACY_POLICY.md)
+* [Terms of Service](./TERMS_OF_SERVICE.md)
+* [Legal Notice](./LEGAL_NOTICE.md)
+* [Open Source Licenses](./OPEN_SOURCE_LICENSES.md)
+* [Proprietary License](./LICENSE.md)
+
+---
+
+## License
 
 Copyright (c) 2026 MFLab-AI. All rights reserved.
 
-This project is protected under a proprietary license. For details, please refer to the full license text in the [LICENSE.md](./LICENSE.md) file.
-
+Memora's source code, assets, branding, documentation, and related materials are proprietary unless a separate written license says otherwise. Third-party open-source components remain governed by their own licenses.

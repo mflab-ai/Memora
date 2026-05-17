@@ -1,27 +1,27 @@
 # Open Source Licenses
 
-Memora uses the following open-source software and libraries. We are grateful to the community for their contributions.
+Memora uses third-party open-source software in the client and server. This page is a summary for notice purposes and does not replace the full license texts from each project.
 
-## Client (iOS/macOS)
+## Client
 
-- **MLX Swift / MLX Swift LM**: MIT License
-- **Swift HuggingFace / Transformers**: Apache License 2.0
-- **Apple Swift Packages (Collections, Crypto, NIO, etc.)**: Apache License 2.0 (with Runtime Library Exception)
-- **yyjson**: MIT License
-- **EventSource**: MIT License
-- **swift-jinja**: MIT License
+- **MLX Swift / MLX Swift LM / MLX VLM-related packages**: MIT License
+- **Swift HuggingFace**: Apache License 2.0
+- **Swift Transformers / Tokenizers**: Apache License 2.0
+- **Apple Swift packages pulled transitively by Swift Package Manager**: governed by their respective package licenses
 
 ## Server
 
 - **FastAPI**: MIT License
 - **Uvicorn**: BSD 3-Clause License
-- **SQLAlchemy & Alembic**: MIT License
-- **Pydantic & Pydantic Settings**: MIT License
+- **Starlette**: BSD 3-Clause License
+- **Pydantic / Pydantic Settings**: MIT License
+- **SQLAlchemy / Alembic**: MIT License
+- **Psycopg 3**: LGPL 3.0 or project-specific distribution terms
 - **HTTPX**: BSD 3-Clause License
-- **Psycopg 3**: LGPL 3.0
 - **PyJWT**: MIT License
-- **Python Multipart**: Apache License 2.0
-- **cryptography**: Apache License 2.0 / BSD 3-Clause License
-- **Starlette**: MIT License
+- **cryptography**: Apache License 2.0 and BSD 3-Clause License
+- **python-multipart**: Apache License 2.0
 
-*(For complete license texts, please refer to the respective project repositories.)*
+## Notes
+
+Some dependencies may include their own transitive dependencies and notices. When distributing the App or server artifacts, include the complete third-party license texts generated from the locked dependency set used for that release.
