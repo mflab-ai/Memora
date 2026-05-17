@@ -8,7 +8,7 @@
 [![Platform: iOS 18+](https://img.shields.io/badge/Platform-iOS%2018%2B-blue.svg?style=flat-square&logo=apple)](https://developer.apple.com/ios/)
 [![Platform: macOS 15+](https://img.shields.io/badge/Platform-macOS%2015%2B-lightgrey.svg?style=flat-square&logo=apple)](https://developer.apple.com/macos/)
 [![Framework: Swift 6](https://img.shields.io/badge/Framework-Swift%206-orange.svg?style=flat-square&logo=swift)](https://developer.apple.com/swift/)
-[![License: Proprietary](https://img.shields.io/badge/License-Proprietary-red.svg?style=flat-square)](./LICENSE)
+[![License: Proprietary](https://img.shields.io/badge/License-Proprietary-red.svg?style=flat-square)](./LICENSE.md)
 
 Memora (내부 프로젝트명 **Re-Moment**)는 프라이버시를 최우선으로 하는 온디바이스 AI 기반 스마트 스토리 컬렉션 및 사진 슬라이드쇼 제작 앱입니다. 사용자는 개인의 민감한 사진 자산과 메타데이터에 대해 완벽한 통제권을 유지하면서, AI가 자동으로 테마별로 묶고 아름다운 내러티브 캡션을 작성하며 영화 같은 슬라이드쇼 비디오를 렌더링하는 혁신을 경험할 수 있습니다.
 
@@ -75,4 +75,5 @@ Memora는 사용자의 데이터 주권(Data Sovereignty) 수호라는 엄격한
 
 Copyright (c) 2026 MFLab-AI. All rights reserved.
 
-본 리포지토리 내의 모든 소스 코드, 자산 및 관련 문서는 **MFLab-AI**의 고유한 자산입니다. 본 리포지토리는 오직 정보 제공, 규정 준수 검토 및 기술 데모 목적으로만 유지 관리됩니다. MFLab-AI의 사전 명시적인 서면 동의 없이 본 소프트웨어를 복제, 배포, 수정 또는 사용하는 것은 엄격히 금지됩니다.
+본 프로젝트는 독점 라이선스 하에 보호됩니다. 자세한 내용은 [LICENSE.md](./LICENSE.md) 파일에서 전체 라이선스 텍스트를 참조하십시오.
+

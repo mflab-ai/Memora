@@ -8,7 +8,7 @@
 [![Platform: iOS 18+](https://img.shields.io/badge/Platform-iOS%2018%2B-blue.svg?style=flat-square&logo=apple)](https://developer.apple.com/ios/)
 [![Platform: macOS 15+](https://img.shields.io/badge/Platform-macOS%2015%2B-lightgrey.svg?style=flat-square&logo=apple)](https://developer.apple.com/macos/)
 [![Framework: Swift 6](https://img.shields.io/badge/Framework-Swift%206-orange.svg?style=flat-square&logo=swift)](https://developer.apple.com/swift/)
-[![License: Proprietary](https://img.shields.io/badge/License-Proprietary-red.svg?style=flat-square)](./LICENSE)
+[![License: Proprietary](https://img.shields.io/badge/License-Proprietary-red.svg?style=flat-square)](./LICENSE.md)
 
 Memora (cujo codinome interno é **Re-Moment**) é um aplicativo complementar para narrativas fotográficas e coleções inteligentes alimentado por inteligência artificial local no dispositivo que prioriza a privacidade. Ele permite que os usuários agrupem automaticamente, criem belas legendas narrativas e renderizem dinamicamente apresentações cinematográficas de suas memórias pessoais—tudo isso enquanto garante que suas fotos e metadados permaneçam estritamente sob seu próprio controle exclusivo.
 
@@ -75,4 +75,5 @@ Consulte os seguintes documentos vinculados para obter informações abrangentes
 
 Copyright (c) 2026 MFLab-AI. Todos os direitos reservados.
 
-O código fonte, os ativos e todos os materiais associados dentro deste repositório são de propriedade exclusiva da **MFLab-AI**. Este repositório é mantido estritamente para fins informativos, conformidade regulatória e demonstração técnica. É estritamente proibido copiar, distribuir, modificar ou utilizar este software de qualquer forma sem o consentimento prévio por escrito da MFLab-AI.
+Este projeto está protegido sob uma licença proprietária. Para mais detalhes, consulte o texto completo da licença no arquivo [LICENSE.md](./LICENSE.md).
+

@@ -8,7 +8,7 @@
 [![Platform: iOS 18+](https://img.shields.io/badge/Platform-iOS%2018%2B-blue.svg?style=flat-square&logo=apple)](https://developer.apple.com/ios/)
 [![Platform: macOS 15+](https://img.shields.io/badge/Platform-macOS%2015%2B-lightgrey.svg?style=flat-square&logo=apple)](https://developer.apple.com/macos/)
 [![Framework: Swift 6](https://img.shields.io/badge/Framework-Swift%206-orange.svg?style=flat-square&logo=swift)](https://developer.apple.com/swift/)
-[![License: Proprietary](https://img.shields.io/badge/License-Proprietary-red.svg?style=flat-square)](./LICENSE)
+[![License: Proprietary](https://img.shields.io/badge/License-Proprietary-red.svg?style=flat-square)](./LICENSE.md)
 
 মেমোরা (Memora - অভ্যন্তরীণ কোড-নাম **Re-Moment**) হল একটি গোপনীয়তা-প্রথম, অন-ডিভাইস এআই-চালিত স্মার্ট স্টোরি সংগ্রহ এবং ফটো-স্লাইডশো তৈরির অ্যাপ্লিকেশন। এটি ব্যবহারকারীদের তাদের সংবেদনশীল ফটো সম্পদ এবং মেটাডেটার উপর সম্পূর্ণ নিয়ন্ত্রণ বজায় রাখার অনুমতি দেয়, যেখানে এআই স্বয়ংক্রিয়ভাবে থিম অনুসারে গ্রুপ তৈরি করে, সুন্দর ন্যারেটিভ ক্যাপশন লেখে এবং সিনেমাটিক স্লাইডশো ভিডিও রেন্ডার করে।
 
@@ -75,4 +75,5 @@
 
 Copyright (c) 2026 MFLab-AI. All rights reserved.
 
-এই রিপোজিটরির সমস্ত উত্স কোড, সম্পদ এবং সম্পর্কিত নথি **MFLab-AI**-এর একচেটিয়া সম্পত্তি। এই রিপোজিটরি কেবল তথ্যগত, নিয়ন্ত্রক কমপ্লায়েন্স পর্যালোচনা এবং প্রযুক্তিগত ডেমো প্রদর্শনের উদ্দেশ্যে রক্ষণাবেক্ষণ করা হয়। MFLab-AI-এর পূর্ব স্পষ্ট লিখিত সম্মতি ছাড়া এই সফ্টওয়্যারটি অনুলিপি, বিতরণ, সংশোধন বা ব্যবহার করা কঠোরভাবে নিষিদ্ধ।
+এই প্রকল্পটি একটি মালিকানাধীন লাইসেন্সের অধীনে সুরক্ষিত। বিস্তারিত জানার জন্য, অনুগ্রহ করে [LICENSE.md](./LICENSE.md) ফাইলে সম্পূর্ণ লাইসেন্স পাঠ্যটি দেখুন।
+

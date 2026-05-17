@@ -8,7 +8,7 @@
 [![Platform: iOS 18+](https://img.shields.io/badge/Platform-iOS%2018%2B-blue.svg?style=flat-square&logo=apple)](https://developer.apple.com/ios/)
 [![Platform: macOS 15+](https://img.shields.io/badge/Platform-macOS%2015%2B-lightgrey.svg?style=flat-square&logo=apple)](https://developer.apple.com/macos/)
 [![Framework: Swift 6](https://img.shields.io/badge/Framework-Swift%206-orange.svg?style=flat-square&logo=swift)](https://developer.apple.com/swift/)
-[![License: Proprietary](https://img.shields.io/badge/License-Proprietary-red.svg?style=flat-square)](./LICENSE)
+[![License: Proprietary](https://img.shields.io/badge/License-Proprietary-red.svg?style=flat-square)](./LICENSE.md)
 
 Memora（内部项目代号为 **Re-Moment**）是一款以用户隐私为核心、基于端侧（On-Device）AI 的智能故事画册与照片幻灯片制作应用。在确保用户对敏感照片资产和元数据拥有绝对控制权的前提下，应用利用 AI 自动进行主题分组、生成优美的叙事字幕，并渲染出电影级质感的故事幻灯片视频。
 
@@ -75,4 +75,5 @@ Memora 的设计基石是捍卫用户的“数据主权”（Data Sovereignty）
 
 Copyright (c) 2026 MFLab-AI. All rights reserved.
 
-本仓库中的所有源代码、资产和相关文档均为 **MFLab-AI** 的专有资产。本仓库仅出于信息提供、合规审查和技术演示的目的进行维护。未经 MFLab-AI 事前明确的书面同意，严禁复制、分发、修改或使用本软件。
+本项目受专有许可证保护。欲了解详情，请参阅 [LICENSE.md](./LICENSE.md) 文件中的完整许可证文本。
+

@@ -8,7 +8,7 @@
 [![Platform: iOS 18+](https://img.shields.io/badge/Platform-iOS%2018%2B-blue.svg?style=flat-square&logo=apple)](https://developer.apple.com/ios/)
 [![Platform: macOS 15+](https://img.shields.io/badge/Platform-macOS%2015%2B-lightgrey.svg?style=flat-square&logo=apple)](https://developer.apple.com/macos/)
 [![Framework: Swift 6](https://img.shields.io/badge/Framework-Swift%206-orange.svg?style=flat-square&logo=swift)](https://developer.apple.com/swift/)
-[![License: Proprietary](https://img.shields.io/badge/License-Proprietary-red.svg?style=flat-square)](./LICENSE)
+[![License: Proprietary](https://img.shields.io/badge/License-Proprietary-red.svg?style=flat-square)](./LICENSE.md)
 
 Memora (internally code-named **Re-Moment**) is a privacy-first, on-device AI-powered smart story collection and photo-slideshow companion. It enables users to automatically group, beautifully caption, and dynamically render cinematic slideshows of their personal memories—all while ensuring that sensitive photo assets and metadata remain strictly under their own control.
 
@@ -75,4 +75,5 @@ Please refer to the following documents for comprehensive information regarding 
 
 Copyright (c) 2026 MFLab-AI. All rights reserved.
 
-The source code, assets, and all associated materials within this repository are the proprietary property of **MFLab-AI**. This repository is maintained strictly for informational, compliance, and demonstration purposes. No license (express or implied) is granted to copy, distribute, modify, or use this software without the prior written consent of MFLab-AI.
+This project is protected under a proprietary license. For details, please refer to the full license text in the [LICENSE.md](./LICENSE.md) file.
+

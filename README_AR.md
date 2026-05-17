@@ -8,7 +8,7 @@
 [![Platform: iOS 18+](https://img.shields.io/badge/Platform-iOS%2018%2B-blue.svg?style=flat-square&logo=apple)](https://developer.apple.com/ios/)
 [![Platform: macOS 15+](https://img.shields.io/badge/Platform-macOS%2015%2B-lightgrey.svg?style=flat-square&logo=apple)](https://developer.apple.com/macos/)
 [![Framework: Swift 6](https://img.shields.io/badge/Framework-Swift%206-orange.svg?style=flat-square&logo=swift)](https://developer.apple.com/swift/)
-[![License: Proprietary](https://img.shields.io/badge/License-Proprietary-red.svg?style=flat-square)](./LICENSE)
+[![License: Proprietary](https://img.shields.io/badge/License-Proprietary-red.svg?style=flat-square)](./LICENSE.md)
 
 تطبيق ميمورا (المعروف داخلياً باسم **Re-Moment**) هو رفيق ذكي لقصص الصور والمجموعات الذكية يعمل بالذكاء الاصطناعي المحلي على الجهاز ويضع الخصوصية في المقام الأول. يتيح التطبيق للمستخدمين تجميع الصور تلقائياً وكتابة تعليقات توضيحية سردية جميلة وإنتاج عروض شرائح سينمائية لذكرياتهم الشخصية، مع ضمان بقاء الصور الحساسة والبيانات الوصفية تحت سيطرتهم الكاملة والمطلقة.
 
@@ -75,4 +75,5 @@
 
 حقوق النشر (c) 2026 محفوظة لـ MFLab-AI. كافة الحقوق محفوظة.
 
-تعد كافة الأكواد المصدرية والأصول والمستندات ذات الصلة داخل هذا المستودع ملكية حصرية وخاصة لـ **MFLab-AI**. يتم صيانة هذا المستودع وإتاحته فقط لأغراض التوضيح التقني ومراجعة الامتثال والقوانين. يُمنع منعاً باتاً نسخ هذا البرنامج أو توزيعه أو تعديله أو استخدامه بأي شكل من الأشكال دون الحصول على موافقة خطية مسبقة وصريحة من MFLab-AI.
+هذا المشروع محمي بموجب ترخيص ملكية خاص. لمزيد من التفاصيل، يرجى الرجوع إلى النص الكامل للترخيص في ملف [LICENSE.md](./LICENSE.md).
+
